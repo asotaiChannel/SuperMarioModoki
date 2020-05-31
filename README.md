@@ -25,5 +25,5 @@ Pythonとpygameというライブラリを用いて作成しています。
 
 ## ライセンス
 Copyright (c) 2020 asotai channel  
-MITライセンスのもとで配布されます。
+MITライセンスのもとで配布されます。  
 https://github.com/asotaiChannel/SuperMarioModoki/blob/master/LICENSE
