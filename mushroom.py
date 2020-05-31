@@ -24,8 +24,8 @@ class Mushroom(Object):
         super().update() # 物体に共通する更新処理
 
     # キノコの描画
-    def draw(self, surface):
-        pygame.draw.rect(surface, (200, 0, 0), Rect(self.x, self.y, self.w, self.h + 1))
+    def draw(self, surface, imageManager):
+        surface.blit(imageManager.images["mushroom"], (self.x, self.y))
 
     # プレイヤー (今回はマリオ) との衝突処理をする
     def collisionDetection(self, player):

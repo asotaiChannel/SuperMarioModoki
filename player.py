@@ -67,6 +67,15 @@ class Player(Object):
         super().update() # 物体に共通する更新処理
 
     # マリオの描画
-    def draw(self, surface):
+    def draw(self, surface, imageManager):
         if not self.is_invincible or (self.invincible_time//4) % 2 == 0: # 無敵の間点滅する
-            pygame.draw.rect(surface, (40, 255, 255) if self.is_big else (247, 195, 156), Rect(self.x, self.y, self.w, self.h + 1))
+            if self.is_big:
+                if (self.t//10) % 2 == 0:
+                    surface.blit(imageManager.images["big_mario_1"], (self.x, self.y + 1))
+                else:
+                    surface.blit(imageManager.images["big_mario_2"], (self.x, self.y + 1))
+            else:
+                if (self.t//10) % 2 == 0:
+                    surface.blit(imageManager.images["mario_1"], (self.x, self.y + 1))
+                else:
+                    surface.blit(imageManager.images["mario_2"], (self.x, self.y + 1))

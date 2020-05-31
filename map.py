@@ -84,8 +84,8 @@ class Map:
                     break
 
     # マップの描画
-    def draw(self, surface):
+    def draw(self, surface, imageManager):
         for block_list in self.block_array:
             for block in block_list:
                 if block:
-                    block.draw(surface)
+                    block.draw(surface, imageManager)

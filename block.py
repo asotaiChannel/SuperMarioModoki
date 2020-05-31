@@ -14,7 +14,7 @@ class Block(Object):
         self.is_hit = True # 衝突判定があるかフラグ
 
     # ブロックの描画
-    def draw(self, surface):
+    def draw(self, surface, imageManager):
         pygame.draw.rect(surface, (80, 80, 80), Rect(self.x + 10, self.y + 10, self.w, self.h))
-        pygame.draw.rect(surface, (150, 150, 150), Rect(self.x, self.y, self.w, self.h))
-        pygame.draw.rect(surface, (0, 0, 0), Rect(self.x, self.y, self.w, self.h), 2)
+        surface.blit(imageManager.images["block"], (self.x, self.y))
+        pygame.draw.rect(surface, (0, 0, 0), Rect(self.x, self.y, self.w, self.h), 1)
