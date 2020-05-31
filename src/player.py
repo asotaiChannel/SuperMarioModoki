@@ -3,7 +3,7 @@
 import pygame
 from pygame.locals import *
 
-from object import Object
+from .object import Object
 
 
 # マリオを表現するクラス

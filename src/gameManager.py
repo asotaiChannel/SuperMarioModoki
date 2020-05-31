@@ -2,9 +2,9 @@
 
 import pygame
 
-from inputManager import InputManager
-from imageManager import ImageManager
-from scene import Scene
+from .inputManager import InputManager
+from .imageManager import ImageManager
+from .scene import Scene
 
 
 # 定数の定義

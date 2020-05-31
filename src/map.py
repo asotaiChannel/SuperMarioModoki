@@ -3,7 +3,7 @@
 import pygame
 from pygame.locals import *
 
-from block import Block
+from .block import Block
 
 
 # マップを表現するクラス

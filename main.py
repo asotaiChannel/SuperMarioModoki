@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from gameManager import GameManager
+from src.gameManager import GameManager
 
 
 ### プログラムはここから開始される ###

@@ -3,7 +3,7 @@
 import pygame
 from pygame.locals import *
 
-from object import Object
+from .object import Object
 
 
 # キノコを表現するクラス

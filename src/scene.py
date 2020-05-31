@@ -3,10 +3,10 @@
 import pygame
 from pygame.locals import *
 
-from map import Map
-from player import Player
-from goomba import Goomba
-from mushroom import Mushroom
+from .map import Map
+from .player import Player
+from .goomba import Goomba
+from .mushroom import Mushroom
 
 
 # 定数の定義
