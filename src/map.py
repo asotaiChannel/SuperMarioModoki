@@ -9,23 +9,9 @@ from .block import Block
 # マップを表現するクラス
 class Map:
     # マップの準備時に初めに呼ばれる関数 (コンストラクタ)
-    def __init__(self, w, h):
+    def __init__(self, block_id_array, w, h):
         self.w, self.h = w, h # ブロックの横幅と縦幅を設定する
-        self.block_id_array = [ # マップデータ
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-            [1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1],
-            [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-            [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-            [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
-            [1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1],
-            [1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-        ]
-        self.set(self.block_id_array) # マップデータをブロックの集合に変換する
+        self.set(block_id_array) # マップデータをブロックの集合に変換する
 
     # ブロックを生成する関数
     def blockFactory(self, id, ix, iy):
@@ -37,7 +23,7 @@ class Map:
     # マップ情報をセットする
     def set(self, block_id_array):
         self.block_array = []
-        for iy, block_id_list in enumerate(self.block_id_array):
+        for iy, block_id_list in enumerate(block_id_array):
             self.block_array.append(
                 [
                     self.blockFactory(block_id, ix, iy)
