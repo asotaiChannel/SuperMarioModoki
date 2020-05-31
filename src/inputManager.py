@@ -26,15 +26,16 @@ class InputManager:
 
     # ユーザ入力状態を取得し更新する関数
     def update(self):
+        # 押し続けているキーのカウントを増やす
+        for key in self.key_push.keys():
+            self.key_push[key] += 1
+
+        # キーイベントを取得する
         for event in pygame.event.get():
             if event.type == KEYDOWN: # キー入力されていればキー入力フレーム数を増加する
-                if event.key in self.key_push:
-                    self.key_push[event.key] += 1
-                else:
-                    self.key_push[event.key] = 1
+                self.key_push[event.key] = 1
             elif event.type == KEYUP: # キーが離されたらキー入力フレーム数を消去する
-                if event.key in self.key_push:
-                    self.key_push.pop(event.key)
+                self.key_push.pop(event.key)
             elif event.type == QUIT: # ゲーム画面と閉じるボタンが押されたら終了する
                 pygame.quit()
                 sys.exit()

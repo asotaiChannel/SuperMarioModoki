@@ -57,7 +57,7 @@ class Map:
                     character.x = (ix + 1)*self.w
                     break
         else: # 右側との衝突判定
-            ix = int((character.x + character.w)/self.w)
+            ix = int((character.x + character.w + 1)/self.w)
             for iy in range(int(character.y/self.h), int((character.y + character.h)/self.h) + 1):
                 if self.block_array[iy][ix] and self.block_array[iy][ix].is_hit:
                     character.vx = 0 # 壁とぶつかると横方向の速度をゼロにする
@@ -75,7 +75,7 @@ class Map:
                     break
         else: # 下部との衝突判定
             character.is_fly = True
-            iy = int((character.y + character.h)/self.h)
+            iy = int((character.y + character.h + 1)/self.h)
             for ix in range(int(character.x/self.w), int((character.x + character.w)/self.w) + 1):
                 if self.block_array[iy][ix] and self.block_array[iy][ix].is_hit:
                     character.vy = 0
