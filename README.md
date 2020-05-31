@@ -22,3 +22,8 @@ Pythonとpygameというライブラリを用いて作成しています。
 - Windows10 (x64)
 - Python 3.6.5
 - pygame 1.9.6
+
+## ライセンス
+Copyright (c) 2020 asotai channel  
+MITライセンスのもとで配布されます。
+https://github.com/asotaiChannel/SuperMarioModoki/blob/master/LICENSE
