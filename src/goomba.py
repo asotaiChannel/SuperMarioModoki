@@ -32,12 +32,12 @@ class Goomba(Object):
     def draw(self, surface, imageManager):
         if self.is_treaded: # 踏まれていれば薄くなる
             dy = 0.7*self.h
-            pygame.draw.rect(surface, (240, 100, 0), Rect(self.x, self.y + dy, self.w, self.h - dy + 1))
+            pygame.draw.rect(surface, (240, 100, 0), Rect(self.x, self.y + dy, self.w, self.h - dy))
         else:
             if (self.t//10) % 2 == 0:
-                surface.blit(imageManager.images["goomba_1"], (self.x, self.y + 1))
+                surface.blit(imageManager.images["goomba_1"], (self.x, self.y))
             else:
-                surface.blit(imageManager.images["goomba_2"], (self.x, self.y + 1))
+                surface.blit(imageManager.images["goomba_2"], (self.x, self.y))
 
     # プレイヤー (今回はマリオ) との衝突処理をする
     def collisionDetection(self, player):

@@ -71,11 +71,11 @@ class Player(Object):
         if not self.is_invincible or (self.invincible_time//4) % 2 == 0: # 無敵の間点滅する
             if self.is_big:
                 if (self.t//10) % 2 == 0:
-                    surface.blit(imageManager.images["big_mario_1"], (self.x, self.y + 1))
+                    surface.blit(imageManager.images["big_mario_1"], (self.x, self.y))
                 else:
-                    surface.blit(imageManager.images["big_mario_2"], (self.x, self.y + 1))
+                    surface.blit(imageManager.images["big_mario_2"], (self.x, self.y))
             else:
                 if (self.t//10) % 2 == 0:
-                    surface.blit(imageManager.images["mario_1"], (self.x, self.y + 1))
+                    surface.blit(imageManager.images["mario_1"], (self.x, self.y))
                 else:
-                    surface.blit(imageManager.images["mario_2"], (self.x, self.y + 1))
+                    surface.blit(imageManager.images["mario_2"], (self.x, self.y))
