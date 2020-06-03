@@ -11,7 +11,6 @@ class Block(Object):
     # ブロックの準備時に初めに呼ばれる関数 (コンストラクタ)
     def __init__(self, x, y, w, h):
         super().__init__(x, y, w, h, 0) # 物体として初期化する
-        self.is_hit = True # 衝突判定があるかフラグ
 
     # ブロックの描画
     def draw(self, surface, imageManager):

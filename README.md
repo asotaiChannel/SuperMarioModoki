@@ -7,14 +7,14 @@ Pythonとpygameというライブラリを用いて作成しています。
 十字キーとスペースキーで操作する、マリオっぽい簡易なアクションゲームです。
 
 ## 遊び方
-1. EXEファイルで遊んでみる場合  
+1. EXEファイルで遊んでみる場合 (Windows)  
     このレポジトリをダウンロードし、中にある SuperMarioModoki.exe を実行(ダブルクリック)してください。  
     なお、SuperMarioModokiフォルダの中身の構造は変更しないでください。(EXEファイルと同階層にimgフォルダが存在する必要があります)。  
-    Mac/Linuxの場合はWineなどを利用して実行してください。
+    ＊Mac/Linuxの場合はWineなどを利用して実行してください。
 2. Pythonファイルを実行して遊ぶ場合  
     Python3系およびpygameをインストールしたのち、以下のようにmain.pyを実行してください。
     ```
-    $ cd SuperMarioModoki
+    $ cd (SuperMarioModokiのフォルダパス)
     $ python main.py
     ```
     なお、SuperMarioModokiフォルダの中身の構造は変更しないでください。

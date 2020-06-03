@@ -38,14 +38,14 @@ class Map:
         if character.vx < 0: # 左側との衝突判定
             ix = int(character.x/self.w)
             for iy in range(int(character.y/self.h), int((character.y + character.h - 1)/self.h) + 1):
-                if self.block_array[iy][ix] and self.block_array[iy][ix].is_hit:
+                if self.block_array[iy][ix]:
                     character.vx = 0 # 壁とぶつかると横方向の速度をゼロにする
                     character.x = (ix + 1)*self.w
                     break
         else: # 右側との衝突判定
             ix = int((character.x + character.w)/self.w)
             for iy in range(int(character.y/self.h), int((character.y + character.h - 1)/self.h) + 1):
-                if self.block_array[iy][ix] and self.block_array[iy][ix].is_hit:
+                if self.block_array[iy][ix]:
                     character.vx = 0 # 壁とぶつかると横方向の速度をゼロにする
                     character.x = ix*self.w - character.w
                     break
@@ -55,7 +55,7 @@ class Map:
         if character.vy < 0: # 上部との衝突判定
             iy = int(character.y/self.h)
             for ix in range(int(character.x/self.w), int((character.x + character.w - 1)/self.w) + 1):
-                if self.block_array[iy][ix] and self.block_array[iy][ix].is_hit:
+                if self.block_array[iy][ix]:
                     character.vy = -0.5*character.vy # 頭をぶつけて少し跳ね返る
                     character.y = (iy + 1)*self.h
                     break
@@ -63,7 +63,7 @@ class Map:
             character.is_fly = True
             iy = int((character.y + character.h)/self.h)
             for ix in range(int(character.x/self.w), int((character.x + character.w - 1)/self.w) + 1):
-                if self.block_array[iy][ix] and self.block_array[iy][ix].is_hit:
+                if self.block_array[iy][ix]:
                     character.vy = 0
                     character.y = iy*self.h - character.h
                     character.is_fly = False
