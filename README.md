@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/65722145/83350983-2b3dd980-a37b-11ea-846f-3bf6243bcad4.gif" width="400">  
 
 ## 概要
-YouTubeで公開中の『ゲームってどうやって作るの？』シリーズで作成したゲームです。  
+YouTubeで公開予定の『ゲームを作る』シリーズで作成したゲームです。  
 Pythonとpygameというライブラリを用いて作成しています。  
 十字キーとスペースキーで操作する、マリオっぽい簡易なアクションゲームです。
 
@@ -12,10 +12,10 @@ Pythonとpygameというライブラリを用いて作成しています。
     なお、SuperMarioModokiフォルダの中身の構造は変更しないでください。(EXEファイルと同階層にimgフォルダが存在する必要があります)。  
     ＊Mac/Linuxの場合はWineなどを利用して実行してください。
 2. Pythonファイルを実行して遊ぶ場合  
-    Python3系およびpygameをインストールしたのち、以下のようにmain.pyを実行してください。
+    Python3系およびpygameをインストールしたのち、以下のように実行してください。
     ```
     $ cd (SuperMarioModokiのフォルダパス)
-    $ python main.py
+    $ python SuperMarioModoki.py
     ```
     なお、SuperMarioModokiフォルダの中身の構造は変更しないでください。
 
